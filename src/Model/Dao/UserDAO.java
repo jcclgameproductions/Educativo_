@@ -16,21 +16,21 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
 public class UserDAO {
     public void create(User us){
      Connection con = ConnectionFactory.getConnection();
      PreparedStatement stmt = null;
         try {
-            stmt = con.prepareStatement("INSERT INTO tb_user (nm_user, cd_senha)VALUES(?,?)");
+            stmt = con.prepareStatement("INSERT INTO tb_user (nm_user, cd_senha, nm_email)VALUES(?,?,?)");
             stmt.setString(1,us.getNmuser());
             stmt.setString(2,us.getCdsenha());
+            stmt.setString(3,us.getEmail());
             
             stmt.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Sucesso");
+            
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro"+ex);
+            JOptionPane.showMessageDialog(null, "Erro(20-32)UserDAO: "+ex);
         }finally{
         ConnectionFactory.closeConnection(con, stmt);     
         }
@@ -48,7 +48,7 @@ public ResultSet autUser(User us){
            return rslt;
            
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro" +ex);
+            JOptionPane.showMessageDialog(null, "Erro UserDAO " +ex);
             ConnectionFactory.closeConnection(con, stmt);
             return null;
         }//finally{

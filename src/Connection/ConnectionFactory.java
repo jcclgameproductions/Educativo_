@@ -13,13 +13,9 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author ritap
- */
 public class ConnectionFactory {
     private static final String DRIVER = "com.mysql.jdbc.Driver"; 
-    private static final String URL = "jdbc:mysql://localhost:3306/a";
+    private static final String URL = "jdbc:mysql://localhost:3306/db_Educativo";
     private static final String USER = "root";
     private static final String PASS = "";
     
