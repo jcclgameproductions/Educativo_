@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="490.0" style="-fx-background-color: #0F3057;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FxController">
+   <children>
+      <AnchorPane layoutY="-15.0" prefHeight="565.0" prefWidth="497.0">
+         <children>
+            <Pane layoutX="45.0" layoutY="14.0" prefHeight="550.0" prefWidth="408.0" style="-fx-background-color: #0a1d4d;">
+               <children>
+                  <Pane id="box" layoutX="22.0" layoutY="179.0" prefHeight="346.0" prefWidth="365.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 0.1; visibility: true;">
+                     <children>
+                        <TextField id="usfd" fx:id="usertf" layoutX="53.0" layoutY="151.0" onAction="#btncd" prefHeight="29.0" prefWidth="245.0" promptText="USUARIO:" style="-fx-background-color: #0a1d4d;">
+                           <font>
+                              <Font name="System Italic" size="11.0" />
+                           </font>
+                        </TextField>
+                        <Hyperlink fx:id="hplfb" layoutX="85.0" layoutY="99.0" text="Facebook" />
+                        <Hyperlink fx:id="hplemail" layoutX="188.0" layoutY="99.0" text="Email" />
+                        <Separator layoutX="56.0" layoutY="242.0" prefHeight="2.0" prefWidth="239.0" />
+                        <PasswordField id="pssfd" fx:id="psspf" layoutX="53.0" layoutY="199.0" prefHeight="29.0" prefWidth="245.0" promptText="SENHA:" style="-fx-background-color: #0a1d4d;">
+                           <font>
+                              <Font name="System Italic" size="11.0" />
+                           </font>
+                        </PasswordField>
+                        <JFXButton fx:id="btnlg" cache="true" layoutX="82.0" layoutY="245.0" onAction="#btnlg" prefHeight="34.0" prefWidth="188.0" ripplerFill="#35cdc3" text="login" textFill="#00a9f2">
+                           <font>
+                              <Font name="Futura Bk BT Book" size="17.0" />
+                           </font>
+                           
+                        </JFXButton>
+                        <ImageView fx:id="imgfb" fitHeight="33.0" fitWidth="42.0" layoutX="98.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/600px-Facebook_icon.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imggm" fitHeight="29.0" fitWidth="34.0" layoutX="189.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/120px-Gmail_icon_(2020).svg.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnircd" layoutX="99.0" layoutY="274.0" onAction="#btnircd" onMouseClicked="#btnircd" prefHeight="34.0" prefWidth="157.0" ripplerFill="#4aee4f" text="Não tem conta? " textFill="#00a9f2">
+                           <font>
+                              <Font name="Futura Bk BT Book" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="emailtf" disable="true" focusColor="#1d2247" layoutX="53.0" layoutY="56.0" prefHeight="25.0" prefWidth="196.0" visible="false" />
+                        <JFXTextField fx:id="nmtfcd" disable="true" focusColor="#1d2247" layoutX="121.0" layoutY="92.0" visible="false" />
+                        <Label fx:id="lbl3" layoutX="10.0" layoutY="104.0" text="Nome de usuario" visible="false" />
+                        <Label fx:id="lbl2" layoutX="8.0" layoutY="75.0" text="E-Mail" visible="false">
+                           <font>
+                              <Font name="Webdings" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl4" layoutX="7.0" layoutY="143.0" text="Senha" visible="false" />
+                        <JFXTextField fx:id="psscd" disable="true" focusColor="#1d2247" layoutX="56.0" layoutY="139.0" prefHeight="25.0" prefWidth="196.0" visible="false" />
+                        <Label fx:id="lbl5" layoutX="9.0" layoutY="180.0" text="Confirmar senha" visible="false" />
+                        <JFXTextField fx:id="psscd2" disable="true" focusColor="#1d2247" layoutX="104.0" layoutY="176.0" prefHeight="25.0" prefWidth="157.0" visible="false" />
+                        <JFXButton fx:id="btncd" cache="true" cacheHint="SPEED" disable="true" layoutX="73.0" layoutY="245.0" onAction="#btncd" prefHeight="34.0" prefWidth="188.0" ripplerFill="#35cdc3" text="Cadastro" textFill="#00a9f2" visible="false">
+                           <font>
+                              <Font name="Futura Bk BT Book" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnirlg" disable="true" layoutX="89.0" layoutY="274.0" onAction="#btnirlg" prefHeight="34.0" prefWidth="157.0" ripplerFill="#4aee4f" text="Já tem conta?" textFill="#00a9f2" visible="false">
+                           <font>
+                              <Font name="Futura Bk BT Book" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="img" fitHeight="147.0" fitWidth="135.0" layoutX="236.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@Icons/EducAtivo_Icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbl1" layoutX="45.0" layoutY="14.0" prefHeight="40.0" prefWidth="245.0" text="EDUCATIVO" textFill="#1d2247" visible="false">
+                           <font>
+                              <Font name="Webdings" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblmsg" contentDisplay="CENTER" layoutX="70.0" layoutY="-1.0" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #8A2D3C;" text="  ERRO:NOME OU SENHA INVÁLIDOS" textAlignment="CENTER" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Wingdings" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Circle fill="#f4f6f8" layoutX="86.0" layoutY="96.0" radius="56.0" stroke="#0f3057" strokeType="OUTSIDE" strokeWidth="10.0" />
+                  <ImageView fitHeight="147.0" fitWidth="157.0" layoutX="7.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/EducAtivo_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="169.0" layoutY="46.0" text="EDUCA" textFill="WHITE">
+                     <font>
+                        <Font name="Webdings" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="173.0" layoutY="86.0" text="ATIVO" textFill="WHITE">
+                     <font>
+                        <Font name="Webdings" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
